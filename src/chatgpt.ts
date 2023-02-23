@@ -12,8 +12,12 @@ const ChatGPTModelConfig = {
   // this model field is required
   model: "text-davinci-003",
   // add your ChatGPT model parameters below
-  temperature: 0.3,
-  max_tokens: 2000,
+      temperature: 0.9, // 每次返回的答案的相似度0-1（0：每次都一样，1：每次都不一样）
+    max_tokens: 4000,
+    top_p: 1,
+    frequency_penalty: 0.0,
+    presence_penalty: 0.6,
+    stop: [' Human:', ' AI:'],
 };
 
 // message size for a single reply by the bot
